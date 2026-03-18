@@ -7,18 +7,18 @@ main()
     cout<<" Enter number : ";
     cin>>n;
      
-    int arr[n];
+    int num[n];
     cout<<" Enter "<<n <<" number per line : "<<endl;
     for(int i = 0; i < n; i++ )
     {
-        cin>>arr[i];
+        cin>>num[i];
     }
-    int largest = arr[0];
+    int largest = num[0];
     for(int i = 1; i < n; i++) 
     { 
-        if(arr[i] > largest) 
+        if(num[i] > largest) 
         {
-            largest = arr[i];
+            largest = num[i];
         }
     }
     cout<<" largest number : "<<largest;

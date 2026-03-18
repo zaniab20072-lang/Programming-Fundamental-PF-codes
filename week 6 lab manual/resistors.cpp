@@ -7,13 +7,13 @@ main()
     cout<<" Enter the number of resistors in serries circuit : ";
     cin>>n;
 
-    int arr[n];
+    int num[n];
     cout<<" Enter the resistance values in ohm of " <<n <<" resistors per line : "<<endl;
 
     for( int i = 0; i < n; i++ )
     {
-        cin>>arr[i];
-        res += arr[i];
+        cin>>num[i];
+        res += num[i];
     }
     cout<<" The total resistance of serries circuit is " <<res <<" ohms ";
 }
