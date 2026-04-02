@@ -164,6 +164,7 @@ main()
                                 age_array[found_index] = age;
                                 matric_array[found_index] = matric;
                                 inter_array[found_index] = fsc;
+                                ecat_array[found_index] = ecat;
                                 pref1_array[found_index] = pref1;
                                 pref2_array[found_index] = pref2;
                                 pref3_array[found_index] = pref3;
@@ -272,6 +273,7 @@ main()
                                 age_array[found_index] = 0;
                                 matric_array[found_index] = 0;
                                 inter_array[found_index] = 0;
+                                ecat_array[found_index] = 0;
                                 pref1_array[found_index] = "";
                                 pref2_array[found_index] = "";
                                 pref3_array[found_index] = "";
@@ -292,9 +294,11 @@ main()
                         }
                         cout << " Press any key to continue... " << endl;
                         getch();
+                        
                     }
                     cout << " Press any key to continue... " << endl;
                     getch();
+                    break;
                 }
                 else
                 {
@@ -341,6 +345,7 @@ main()
             age_array[index] = age;
             matric_array[index] = matric;
             inter_array[index] = fsc;
+            ecat_array[index] = ecat;
             pref1_array[index] = pref1;
             pref2_array[index] = pref2;
             pref3_array[index] = pref3;
