@@ -71,6 +71,8 @@ main()
                     while (true)
                     {
                         system("cls");
+                        cout << "******************************************" << endl;
+                        cout << " Menu For Event Oraganizer " << endl;
                         cout << " 1- Show All Events " << endl;
                         cout << " 2- Search Event " << endl;
                         cout << " 3- Add Event " << endl;
@@ -81,6 +83,7 @@ main()
                         cout << " 8- View Bookings " << endl;
                         cout << " 9- Sort Events By Highest Price " << endl;
                         cout << " 10- Logout " << endl;
+                        cout << "******************************************" << endl;
                         cout << " Choose option : " << endl;
                         string admin_option;
                         cin >> admin_option;
@@ -88,8 +91,10 @@ main()
                         if (admin_option == "1")
                         {
                             // code for, show all events record
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities ";
                             cout << endl;
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             for (int i = 0; i < index; i++)
                             {
                                 if (EventName_Array[i] != "")
@@ -99,6 +104,7 @@ main()
                                          << "\t\t " << FreeThings_Array[i] << endl;
                                 }
                             }
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                         }
                         else if (admin_option == "2")
                         {
@@ -123,23 +129,29 @@ main()
                             }
                             else
                             {
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                                 cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                                 cout << EventID_Array[found_index] << "\t\t " << EventName_Array[found_index] << "\t\t " << EventDates_Array[found_index] << "\t\t "
                                      << TotalSeats_Array[found_index] << "\t\t " << TicketPrice_Array[found_index] << "\t\t " << RemainingSeats_Array[found_index]
                                      << "\t\t " << FreeThings_Array[found_index] << endl;
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             }
                         }
                         else if (admin_option == "3")
                         {
                             // code for Add Event
                             cout << " The Old Record " << endl;
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             for (int i = 0; i < index; i++)
                             {
                                 cout << EventID_Array[i] << "\t\t " << EventName_Array[i] << "\t\t " << EventDates_Array[i] << "\t\t "
                                      << TotalSeats_Array[i] << "\t\t " << TicketPrice_Array[i] << "\t\t " << RemainingSeats_Array[i]
                                      << "\t\t " << FreeThings_Array[i] << endl;
                             }
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             cout << endl;
                             cout << " Adding new Event " << endl;
                             for (int i = index; i < index + 1; i++)
@@ -221,10 +233,13 @@ main()
                             if (found == true)
                             {
                                 cout << " The Old Record of this event is : " << endl;
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                                 cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                                 cout << EventID_Array[found_index] << "\t\t " << EventName_Array[found_index] << "\t\t " << EventDates_Array[found_index] << "\t\t "
                                      << TotalSeats_Array[found_index] << "\t\t " << TicketPrice_Array[found_index] << "\t\t " << RemainingSeats_Array[found_index]
                                      << "\t\t " << FreeThings_Array[found_index] << endl;
+                                cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 
                                 cout << " Enter new record " << endl;
                                 cout << " Enter New Event Name : ";
@@ -332,7 +347,9 @@ main()
                             }
 
                             cout << "Events sorted by highest ticket price" << endl;
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                             for (int i = 0; i < index; i++)
                             {
                                 if (EventName_Array[i] != "")
@@ -342,6 +359,7 @@ main()
                                          << "\t\t " << FreeThings_Array[i] << endl;
                                 }
                             }
+                            cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                         }
                         else if (admin_option == "10")
                         {
@@ -372,6 +390,7 @@ main()
             {
                 // code for the customers
                 system("cls");
+                cout << "******************************************************" << endl;
                 cout << "-------- Welcome To EMS Customer Menu --------" << endl;
                 cout << " 1- Veiw Events " << endl;
                 cout << " 2- Book Tickets " << endl;
@@ -380,7 +399,8 @@ main()
                 cout << " 5- Cancel seats " << endl;
                 cout << " 6- Give Your Feedback " << endl;
                 cout << " 7- View Event Facilities " << endl;
-                cout << " 8- Logout" << endl
+                cout << " 8- Logout" << endl;
+                cout << "*******************************************************" << endl
                      << endl;
                 cout << " Enter your choice : " << endl;
                 string customer_option;
@@ -390,7 +410,9 @@ main()
 
                 if (customer_option == "1")
                 {
+                    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                     cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                     for (int i = 0; i < index; i++)
                     {
                         if (EventName_Array[i] != "")
@@ -400,6 +422,7 @@ main()
                                  << "\t\t " << FreeThings_Array[i] << endl;
                         }
                     }
+                    cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                 }
                 else if (customer_option == "2")
                 {
@@ -457,31 +480,65 @@ main()
                 }
                 else if (customer_option == "3")
                 {
-                    cout << " Generating your ticket please wait... " << endl;
-                    bool found = false;
-                    int found_index = -1;
-                    for (int i = 0; i < index; i++)
-                    {
-                        if (EventName_Array[i] == event_name)
+                        cout << " Enter customer name : ";
+                        cin.ignore();
+                        getline(cin, customer_name);
+
+                        cout << " Generating your ticket please wait... " << endl;
+
+                        bool found = false;
+                        int found_index = -1;
+
+                        for (int i = 0; i < booking_index; i++)
                         {
-                            found_index = i;
-                            found = true;
+                            if (CustomerName_Array[i] == customer_name)
+                            {
+                                found_index = i;
+                                found = true;
+                            }
                         }
-                    }
-                    if (found == true)
-                    {
-                        cout << " Your Ticket " << endl;
-                        cout << "-----------------------------------------------------------------------------------------------------------------------------------" << endl
-                             << endl;
-                        cout << "Customer_Name\t Event_Name\t\t Event_ID\t event_Date\t No_of_Seats\t Ticket_Price\t Total_Price\t Free Facilties " << endl;
-                        cout << CustomerName_Array[found_index] << "\t " << EventName_Array[found_index] << "\t\t " << EventID_Array[found_index] << "\t\t " << EventDates_Array[found_index]
-                             << "\t\t " << BookingSeats_Array[found_index] << "\t\t " << TicketPrice_Array[found_index] << "\t\t " << total_price << "\t\t " << FreeThings_Array[found_index]
-                             << endl
-                             << endl;
-                        cout << "-----------------------------------------------------------------------------------------------------------------------------------" << endl;
-                    }
-                    cout << " Press any key to Continue..... " << endl;
-                    getch();
+
+                        if (found == true)
+                        {
+                            int event_index = -1;
+
+                            for (int i = 0; i < index; i++)
+                            {
+                                if (EventName_Array[i] == BookingEvent_Array[found_index])
+                                {
+                                    event_index = i;
+                                }
+                            }
+
+                            cout << " Your Ticket " << endl;
+                            cout << "*********************************************************************************************************************************************************************************" << endl
+                                 << endl;
+                            cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+                            cout << "Customer_Name\t Event_Name\t\t Event_ID\t event_Date\t No_of_Seats\t Ticket_Price\t Total_Price\t Free Facilties " << endl;
+                            cout << "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+
+                            cout << CustomerName_Array[found_index] << "\t "
+                                 << EventName_Array[event_index] << "\t\t "
+                                 << EventID_Array[event_index] << "\t\t "
+                                 << EventDates_Array[event_index] << "\t\t "
+                                 << BookingSeats_Array[found_index] << "\t\t "
+                                 << TicketPrice_Array[event_index] << "\t\t "
+                                 << BookingBill_Array[found_index] << "\t\t "
+                                 << FreeThings_Array[event_index]
+                                 << endl
+                                 << endl;
+
+                            cout << "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl
+                                 << endl;
+                            cout << "*********************************************************************************************************************************************************************************" << endl;
+                        }
+                        else
+                        {
+                            cout << " Booking not found " << endl;
+                        }
+
+                        cout << " Press any key to Continue..... " << endl;
+                        getch();
                 }
                 else if (customer_option == "4")
                 {
@@ -506,10 +563,13 @@ main()
                     }
                     else
                     {
+                        cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                         cout << "Event_ID\t Event_Name\t\t Event_Date\t Total_seats\t Ticket_Price\t  REmaining_Seats\t Free_Facilities " << endl;
+                        cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                         cout << EventID_Array[found_index] << "\t\t " << EventName_Array[found_index] << "\t\t " << EventDates_Array[found_index] << "\t\t "
                              << TotalSeats_Array[found_index] << "\t\t " << TicketPrice_Array[found_index] << "\t\t " << RemainingSeats_Array[found_index]
                              << "\t\t " << FreeThings_Array[found_index] << endl;
+                        cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
                     }
                 }
                 else if (customer_option == "5")
@@ -559,9 +619,9 @@ main()
                     getline(cin, feedback);
                     cout << endl
                          << " Your FeedBack : " << endl;
-                    cout << "-----------------------------------------------------------------------------------------------------------------------" << endl;
+                    cout << "***********************************************************************************************************************" << endl;
                     cout << feedback << endl;
-                    cout << "-----------------------------------------------------------------------------------------------------------------------" << endl;
+                    cout << "***********************************************************************************************************************" << endl;
                     cout << " Thanks For Giving Your FeedBAck " << endl;
                 }
                 else if (customer_option == "7")
