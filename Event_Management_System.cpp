@@ -614,6 +614,7 @@ main()
                 else if (customer_option == "6")
                 {
                     // code for feedback
+                    cout<<" Enter your feedback : ";
                     string feedback;
                     cin.ignore();
                     getline(cin, feedback);
