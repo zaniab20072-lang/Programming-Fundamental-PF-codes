@@ -42,7 +42,7 @@ main()
         cout << "---------------------------------------------------------------------" << endl
              << endl;
 
-        cout << "  Mai Menu : " << endl;
+        cout << "  Main Menu : " << endl;
         cout << " 1- Event Organizer " << endl;
         cout << " 2- Customer " << endl;
         cout << " 3- To Exit " << endl;
