@@ -14,9 +14,9 @@ void View_Bookings(int booking_index, string CustomerName_Array[], string Bookin
 void Sorting_Event(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[]);
 
 // functions for customers
-void Booking_Tickets(string customer_name, int index, string EventName_Array[], string event_name, int seats, int RemainingSeats_Array[], int total_price, int TicketPrice_Array[], string CustomerName_Array[], int BookingBill_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int &booking_index);
-void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], string EventID_Array[], string EventDates_Array[], int BookingSeats_Array[], int TicketPrice_Array[], int BookingBill_Array[], string FreeThings_Array[], string BookingEvent_Array[], int index, string customer_name, int booking_index);
-void Cancel_Seats(int RemainingSeats_Array[], int BookingSeats_Array[], int BookingBill_Array[], int TicketPrice_Array[], int cancel_seats, string CustomerName_Array[], string BookingEvent_Array[], string customer_name, string event_name, int booking_index);
+void Booking_Tickets(string &customer_name, int index, string EventName_Array[], string &event_name, int seats, int RemainingSeats_Array[], int total_price, int TicketPrice_Array[], string CustomerName_Array[], int BookingBill_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int &booking_index);
+void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], string EventID_Array[], string EventDates_Array[], int BookingSeats_Array[], int TicketPrice_Array[], int BookingBill_Array[], string FreeThings_Array[], string BookingEvent_Array[], int index, string &customer_name, int &booking_index);
+void Cancel_Seats(int RemainingSeats_Array[], int BookingSeats_Array[], int BookingBill_Array[], int TicketPrice_Array[], int cancel_seats, string CustomerName_Array[], string BookingEvent_Array[], string &customer_name, string &event_name, int &booking_index);
 void Free_Facilities(int index, string EventName_Array[], string FreeThings_Array[]);
 
 main()
@@ -30,7 +30,7 @@ main()
                                             "Fashion Show", "Movie Premiere", "Cultural Night", "Business Conference"};
     string EventDates_Array[total_events] = {"20-Apr-2026", "22-Apr-2026", "25-Apr-2026", "28-Apr-2026", "30-Apr-2026",
                                              "03-May-2026", "06-May-2026", "08-May-2026"};
-    string EventID_Array[13] = {"E101", "E102", "E103", "E104", "E105", "E106", "E107", "E108"};
+    string EventID_Array[total_events] = {"E101", "E102", "E103", "E104", "E105", "E106", "E107", "E108"};
     int TicketPrice_Array[total_events] = {2500, 1500, 1000, 3000, 1200, 3500, 2800, 800};
     int TotalSeats_Array[total_events] = {100, 80, 120, 60, 70, 150, 90, 200};
     int RemainingSeats_Array[total_events] = {72, 54, 95, 38, 49, 110, 61, 170};
@@ -49,10 +49,12 @@ main()
                                              "Art Brochure + Free Coffee + Souvenir", "Welcome Drink + Free Makeup Sample + Parking", "Popcorn + Soft Drink + Poster",
                                              "Dinner + Tea + Reserved Seating", "Conference Kit + Lunch + Free WiFi"};
 
+
     // CURD create, read, update, delete
     while (true)
     {
         // main header
+
         system("cls");
         cout << "---------------------------------------------------------------------" << endl;
         cout << "--------------------- Event Management System -----------------------" << endl;
@@ -69,9 +71,11 @@ main()
         cin >> user_option;
         cout << " You Choose : " << user_option << endl;
 
+
         if (user_option == "1")
         {
             // Here is the Event Organizer Code and I'm also using word Admin for it
+
             for (int i = 0; i < 3; i++)
             {
                 system("cls");
@@ -179,11 +183,14 @@ main()
                 break;
             }
         }
+
+
         else if (user_option == "2")
         {
             while (true)
             {
                 // code for the customers
+
                 system("cls");
                 cout << "******************************************************" << endl;
                 cout << "-------- Welcome To EMS Customer Menu --------" << endl;
@@ -250,10 +257,12 @@ main()
                 getch();
             }
         }
+
         else if (user_option == "3")
         {
             break;
         }
+
         else
         {
             cout << " You entered wrong option " << endl;
@@ -261,11 +270,15 @@ main()
         cout << " Press any key to continue...." << endl;
         getch();
     }
+
     // end of main while loop
+
     cout << " Thank you for using our system ! " << endl;
+
 }
 
 //funtion for showing alll events
+
 void Show_All_Events(int &index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     cout << "------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -285,6 +298,7 @@ void Show_All_Events(int &index, string EventID_Array[], string EventName_Array[
 }
 
 // fuction to search a function
+
 void Search_Event(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     cout << " Enter Event name you want to search : ";
@@ -318,6 +332,7 @@ void Search_Event(int index, string EventID_Array[], string EventName_Array[], s
 }
 
 // function to add a new event
+
 void Adding_New_Event(int &index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     cout << " Adding new Event " << endl;
@@ -349,6 +364,7 @@ void Adding_New_Event(int &index, string EventID_Array[], string EventName_Array
 }
 
 // function for deleting an event
+
 void Deleting_Event(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     cout << " Enter the event name you want to delete record of : ";
@@ -383,6 +399,7 @@ void Deleting_Event(int index, string EventID_Array[], string EventName_Array[],
 }
 
 // function for updating an event
+
 void Updating_Event(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     cout << " Enter the name you want to update record of : ";
@@ -445,6 +462,7 @@ void Updating_Event(int index, string EventID_Array[], string EventName_Array[],
 }
 
 // function for showing the reports of the event 
+
 void Report_of_Events(int index, string EventName_Array[], int TotalSeats_Array[], int RemainingSeats_Array[], int TicketPrice_Array[])
 {
     for (int i = 0; i < index; i++)
@@ -462,6 +480,7 @@ void Report_of_Events(int index, string EventName_Array[], int TotalSeats_Array[
 }
 
 // function for viewing customers
+
 void View_Customers(int booking_index, string CustomerName_Array[])
 {
     cout << " Customers Name : " << endl;
@@ -472,6 +491,7 @@ void View_Customers(int booking_index, string CustomerName_Array[])
 }
 
 // function for viewing bookings
+
 void View_Bookings(int booking_index, string CustomerName_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int BookingBill_Array[])
 {
     for (int i = 0; i < booking_index; i++)
@@ -482,6 +502,7 @@ void View_Bookings(int booking_index, string CustomerName_Array[], string Bookin
 }
 
 // function for sorting events in order of highest price of ticket
+
 void Sorting_Event(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[])
 {
     for (int i = 0; i < index - 1; i++)
@@ -522,8 +543,9 @@ void Sorting_Event(int index, string EventID_Array[], string EventName_Array[], 
     }
 }
 
-// function for bboking tickets
-void Booking_Tickets(string customer_name, int index, string EventName_Array[], string event_name, int seats, int RemainingSeats_Array[], int total_price, int TicketPrice_Array[], string CustomerName_Array[], int BookingBill_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int &booking_index)
+// function for booking tickets
+
+void Booking_Tickets(string &customer_name, int index, string EventName_Array[], string &event_name, int seats, int RemainingSeats_Array[], int total_price, int TicketPrice_Array[], string CustomerName_Array[], int BookingBill_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int &booking_index)
 {
     cout << " Enter your Name : ";
     cin.ignore();
@@ -578,7 +600,8 @@ void Booking_Tickets(string customer_name, int index, string EventName_Array[], 
 }
 
 //function for generating tickets
-void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], string EventID_Array[], string EventDates_Array[], int BookingSeats_Array[], int TicketPrice_Array[], int BookingBill_Array[], string FreeThings_Array[], string BookingEvent_Array[], int index, string customer_name, int booking_index)
+
+void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], string EventID_Array[], string EventDates_Array[], int BookingSeats_Array[], int TicketPrice_Array[], int BookingBill_Array[], string FreeThings_Array[], string BookingEvent_Array[], int index, string &customer_name, int &booking_index)
 {
     cout << " Enter customer name : ";
     cin.ignore();
@@ -639,7 +662,8 @@ void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], str
 }
 
 // function for cancel the seats
-void Cancel_Seats(int RemainingSeats_Array[], int BookingSeats_Array[], int BookingBill_Array[], int TicketPrice_Array[], int cancel_seats, string CustomerName_Array[], string BookingEvent_Array[], string customer_name, string event_name, int booking_index)
+
+void Cancel_Seats(int RemainingSeats_Array[], int BookingSeats_Array[], int BookingBill_Array[], int TicketPrice_Array[], int cancel_seats, string CustomerName_Array[], string BookingEvent_Array[], string &customer_name, string &event_name, int &booking_index)
 {
     cout << " Enter customer name: ";
     cin.ignore();
@@ -679,6 +703,7 @@ void Cancel_Seats(int RemainingSeats_Array[], int BookingSeats_Array[], int Book
 }
 
 //function for displaying free facilities
+
 void Free_Facilities(int index, string EventName_Array[], string FreeThings_Array[])
 {
     cout << "Event Name\t\t Free Facilities" << endl
