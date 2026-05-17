@@ -1,0 +1,63 @@
+E101
+Music Concert
+20-Apr-2026
+100
+2500
+66
+Free Parking + Welcome Drink + VIP Badge
+E102
+Comedy Show
+22-Apr-2026
+80
+1500
+54
+Free Snacks + Soft Drink + Photo Booth
+E103
+Food Festival
+25-Apr-2026
+120
+1000
+87
+Free Tasting Coupon + Water Bottle + Gift Card
+E104
+Art Exhibition
+28-Apr-2026
+60
+3000
+38
+Art Brochure + Free Coffee + Souvenir
+E105
+Fashion Show
+30-Apr-2026
+70
+1200
+37
+Welcome Drink + Free Makeup Sample + Parking
+E106
+Movie Premiere
+03-May-2026
+150
+3500
+110
+Popcorn + Soft Drink + Poster
+E107
+Cultural Night
+06-May-2026
+90
+2800
+61
+Dinner + Tea + Reserved Seating
+E108
+Business Party
+22-May-2026
+200
+1500
+127
+Conference + Lunch + Free WiFi
+E109
+My Picture
+04-April-2026
+45
+1250
+23
+Welcome Drinks + Pictures + Parking
