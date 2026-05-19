@@ -20,7 +20,7 @@ void Generate_Tickets(string CustomerName_Array[], string EventName_Array[], str
 void Cancel_Seats(int index, string EventName_Array[], int RemainingSeats_Array[], int BookingSeats_Array[], int BookingBill_Array[], int TicketPrice_Array[], int cancel_seats, string CustomerName_Array[], string BookingEvent_Array[], string &customer_name, string &event_name, int &booking_index);
 void Free_Facilities(int index, string EventName_Array[], string FreeThings_Array[]);
 
-// function for files
+// function for files 
 void Save_Events(int index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[]);
 void Load_Events(int &index, string EventID_Array[], string EventName_Array[], string EventDates_Array[], int TotalSeats_Array[], int TicketPrice_Array[], int RemainingSeats_Array[], string FreeThings_Array[]);
 void Save_Bookings(int booking_index, string CustomerName_Array[], string BookingEvent_Array[], int BookingSeats_Array[], int BookingBill_Array[]);

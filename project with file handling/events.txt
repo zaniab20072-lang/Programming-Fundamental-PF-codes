@@ -10,7 +10,7 @@ Comedy Show
 22-Apr-2026
 80
 1500
-54
+47
 Free Snacks + Soft Drink + Photo Booth
 E103
 Food Festival
@@ -61,3 +61,10 @@ My Picture
 1250
 23
 Welcome Drinks + Pictures + Parking
+E110
+Movie Night
+23-may-2026
+29
+1300
+12
+Dinner + welcome Drinks + Reserved seats
