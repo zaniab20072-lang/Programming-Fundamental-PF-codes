@@ -3,7 +3,7 @@ Music Concert
 20-Apr-2026
 100
 2500
-66
+65
 Free Parking + Welcome Drink + VIP Badge
 E102
 Comedy Show
@@ -24,7 +24,7 @@ Art Exhibition
 28-Apr-2026
 60
 3000
-38
+35
 Art Brochure + Free Coffee + Souvenir
 E105
 Fashion Show

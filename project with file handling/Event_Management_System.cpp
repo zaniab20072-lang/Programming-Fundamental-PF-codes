@@ -103,6 +103,9 @@ main()
                 cout << " Enter Password : ";
                 string password;
                 cin >> password;
+
+                // user_name = Admin and password = 2429 for login 
+
                 if (user_name == "Admin" && password == "2429")
                 {
                     cout << " login successfully " << endl;
@@ -118,7 +121,7 @@ main()
                         cout << " 4- Delete Event " << endl;
                         cout << " 5- Update Record of Event " << endl;
                         cout << " 6- Report of Events " << endl;
-                        cout << " 7- Veiw Customers " << endl;
+                        cout << " 7- View Customers " << endl;
                         cout << " 8- View Bookings " << endl;
                         cout << " 9- Sort Events By Highest Price " << endl;
                         cout << " 10- View feedbacks of Customers " << endl;
@@ -222,7 +225,7 @@ main()
                 cout << "******************************************************" << endl;
                 cout << "------------ Welcome To EMS Customer Menu ------------" << endl
                      << endl;
-                cout << " 1- Veiw Events " << endl;
+                cout << " 1- View Events " << endl;
                 cout << " 2- Book Tickets " << endl;
                 cout << " 3- Generate Ticket " << endl;
                 cout << " 4- Search Event " << endl;
